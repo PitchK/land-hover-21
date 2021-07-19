@@ -34,6 +34,10 @@ body{
     
 }
 
+#mobileHeaderOpen{
+    display: none;
+}
+
 #bottomIconHolder{
     margin-left: 12%;
     padding-top: 2%;
@@ -119,9 +123,25 @@ body{
     padding-left: 1%;
     padding-top: auto;
     padding-bottom: auto;
-    font-size: 150%;
-    height: 35px;
+    font-size: 120%;
+    
 }
+
+.difficultyDisplay2{
+    width: 35%;
+    border-radius: 40px;
+    background-color: lightgrey;
+    margin-left: 1%;
+    background: linear-gradient(to right, #42aaf5 0%, #42aaf5 70%, lightgrey 70%, lightgrey 100%);
+    padding-left: 2%;
+    padding-top: auto;
+    padding-bottom: auto;
+    font-size: 125%;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+
 
 .time{
     font-size: 150%;
@@ -195,11 +215,98 @@ img{
     font-size: 250%;
 }
 
+#similarModels{
+    text-align: center;
+    font-size: 250%;
+}
+
 .images{
     display: flex;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.outer{
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 1px solid black;
+}
+
+.similarImage{
+    width: 30%;
+    margin-left:0;
+    margin-right: 0;
+    height: auto;
+}
+
+.modelTitle{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 175%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.modelSubtitle{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 120%;
+    opacity: 0.8;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 55px;
+}
+
+.innerDiv{
+    width: 70%;
+}
+
+.difficultyDiv{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+}
+
+#explore{
+    text-align: center;
+    margin-top: 3%;
+}
+
+#modelLink{
+    font-size: 125%;
+    padding: 1%;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+}
+.difficultyWord{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 110%;
+}
+
+.time{
+    margin-top: auto;
+    margin-bottom: auto;
+    opacity: 0.8;
+    font-size: 110%;
+    margin-left: 1%;
+}
+
+.bottomLinks2{
+    margin-left: 5%;
+    color: #3480eb;
+    
+    font-size: 135%;
 }
 
 .galleryImg{
@@ -357,10 +464,11 @@ img{
         border-top: 2px solid purple;
         display: none;
         position: fixed;
+        margin-top: 5vh;
     }
-
+    
     .mobileLinks{
-        font-size: 175%;
+        font-size: 5.5vw;
         padding: 5%;
         color: white;
         text-decoration: none;
@@ -380,7 +488,7 @@ img{
     }
 
     #mobileMenu{
-        font-size: 200%;
+        font-size: 6vw;
         text-decoration: underline;
         margin-top: 1%;
         margin-bottom: 1%;
@@ -399,7 +507,7 @@ img{
     #subtitle{
         margin-left: 5%;
         margin-right:5%;
-        font-size: 4.5vw;
+        font-size: 4vw;
         margin-bottom: 4%;
     }
 
@@ -415,9 +523,10 @@ img{
 
     .difficultyDisplay{
         width: 50%;
-        margin-left: 3%;
+        margin-left: 2%;
         font-size: 4.5vw;
-        height: 20px;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
         
     }
 
@@ -452,6 +561,10 @@ img{
     #instructions{
         font-size: 7vw;
     }
+    
+    #similarModels{
+        font-size: 7vw;
+    }
 
     .pdftitle{
         margin-left: 5%;
@@ -476,5 +589,48 @@ img{
 
     .imageCaption{
         font-size: 4vw;
+    }
+
+    .outer{
+        flex-direction: column;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
+
+    .similarImage{
+        width: 100%;
+    }
+
+    .innerDiv{
+        width: 100%;
+    }
+
+    .modelTitle{
+        font-size: 5.5vw;
+        text-align: center;
+        margin-top: 3%;
+    }
+
+    .modelSubtitle{
+        display: none;
+    }
+
+    .difficultyDiv{
+        display: none;
+    }
+
+    .bottomLinks2{
+        font-size: 4.5vw;
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+
+    .outer{
+        padding-bottom: 3%;
+    }
+
+    #explore{
+        margin-top: 5%;
     }
 }
