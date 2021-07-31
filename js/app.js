@@ -8,12 +8,13 @@ function show(){
     }
 }
 
+var unloadedPhoto = 'https://3358nc4e1je93h11tu493nryr3i-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/image-coming-soon.jpg';
+
 document.getElementById('menu').addEventListener('click', show);
 
-var allModels = [{modelName: 'Future Vehicle 9', modelURL: 'https://pitchk.github.io/land-hover-21/fv9.jpg', difficulty: 5, tags: ['Future vehicle', 'Recreational vehicle', 'Hover'], description: 'A twist on the LandHover\'21. Now featuring two large back jets! Looks even faster!', webLink: '/air-point-21'}, {modelName: 'Future Vehicle 1', modelURL: 'https://pitchk.github.io/land-hover-21/fv1.jpg', difficulty: 6.5, tags: ['Air', 'Future vehicle', 'Recreational vehicle'], description: 'The very first model I came up with. Features a single upright tail jet and two engines that propel the vehicle forward.', webLink: '/hexawing'}];
-
-
-
+var allModels = [{modelName: 'Futuristic Boat', modelURL: 'fv9.jpg', difficulty: 5.5, tags: ['Future vehicle', 'Recreational vehicle', 'Hover'], description: 'A twist on the LandHover\'21. Now featuring two large back jets! Looks even faster!', webLink: '/futuristic-boat', time: '13-19 min'},
+{modelName: 'Future Vehicle 1', modelURL: 'fv1.jpg', difficulty: 6.5, tags: ['Air', 'Future vehicle', 'Recreational vehicle'], description: 'The very first model I came up with. Features a single upright tail jet and two engines that propel the vehicle forward.', webLink: '/future-vehicle-1', time: '12-18 min'}
+];
 for (var i = 0; i < allModels.length; i++){
     var d = document.createElement('div');
     d.className = 'outer';
@@ -55,7 +56,7 @@ for (var i = 0; i < allModels.length; i++){
 
     var time = document.createElement('p');
     time.className = 'time';
-    time.innerHTML = ' | ⌛ Estimated time: 10-12 min';
+    time.innerHTML = ' | ⌛ Estimated time: ' + allModels[i].time;
     document.getElementsByClassName('difficultyDiv')[i].appendChild(time);
 
     //bottom two buttons
@@ -82,3 +83,46 @@ for (var i = 0; i < allModels.length; i++){
 for (var i = 0; i < document.getElementsByClassName('difficultyDisplay2').length; i++){
     document.getElementsByClassName('difficultyDisplay2')[i].style.background = 'linear-gradient(to right, #42aaf5 0%, #42aaf5 ' + allModels[i].difficulty*10 + '%, lightgrey ' + allModels[i].difficulty*10 +'%, lightgrey 100%)';
 }
+
+function scrollFirst(){
+    document.getElementById('instructions').scrollIntoView();
+}
+
+function scrollSecond(){
+    document.getElementById('gallery').scrollIntoView();
+}
+
+function scrollThird(){
+    document.getElementById('similarModels').scrollIntoView();
+}
+
+document.getElementsByClassName('explanationLinks')[0].addEventListener('click', scrollFirst);
+document.getElementsByClassName('explanationLinks')[1].addEventListener('click', scrollSecond);
+document.getElementsByClassName('explanationLinks')[2].addEventListener('click', scrollThird);
+
+var darkMode = 'off';
+
+function change(){
+    if(darkMode === 'off'){
+        darkMode = 'on';
+        document.getElementById('instructionSection').style.backgroundColor = 'black';
+        document.getElementById('instructionSection').style.color = 'white';
+        document.getElementById('instructionImage').style.filter = 'invert(1)';
+        document.getElementById('switchOuter').style.border = '2px solid white';
+        document.getElementById('switchOuter').style.backgroundColor = 'orange';
+        document.getElementById('switchInner').style.backgroundColor = 'white';
+        document.getElementById('switchInner').style.transform = 'translate(120%, 0px)';
+    }else{
+        darkMode = 'off';
+        document.getElementById('instructionSection').style.backgroundColor = 'whitesmoke';
+        document.getElementById('instructionSection').style.color = 'black';
+        document.getElementById('instructionImage').style.filter = 'invert(0)';
+        document.getElementById('switchOuter').style.border = '2px solid black';
+        document.getElementById('switchOuter').style.backgroundColor = 'whitesmoke';
+        document.getElementById('switchInner').style.backgroundColor = 'black';
+        document.getElementById('switchInner').style.transform = 'translate(0px, 0px)';
+
+    }
+}
+
+document.getElementById('switchOuter').addEventListener('click', change);
